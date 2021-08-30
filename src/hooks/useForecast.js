@@ -1,12 +1,12 @@
-import { useEffect, useContext } from "react";
-import ForecastContext from "context/ForecastContext";
+import { useEffect } from "react";
+import { useForecastContext } from "context/ForecastContext";
 import { getForecast } from "services/getForecast";
 import { getCurrentWeather } from "utils/getCurrentWeather";
 import { getUpcomingDaysForecast } from "utils/getUpcomingDaysForecast";
 import { getTodaysHighlights } from "utils/getTodaysHighlights";
 
 export const useForecast = (query) => {
-  const { setLoading, setError, setForecast } = useContext(ForecastContext);
+  const { setLoading, setError, setForecast } = useForecastContext();
 
   useEffect(() => {
     if (!query) return;
