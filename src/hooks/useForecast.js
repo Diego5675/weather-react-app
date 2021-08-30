@@ -5,6 +5,8 @@ import { getCurrentWeather } from "utils/getCurrentWeather";
 import { getUpcomingDaysForecast } from "utils/getUpcomingDaysForecast";
 import { getTodaysHighlights } from "utils/getTodaysHighlights";
 
+const MAX_HISTORY_ITEMS = 5;
+
 export const useForecast = (query) => {
   const { setLoading, setError, setForecast } = useForecastContext();
 
@@ -27,6 +29,21 @@ export const useForecast = (query) => {
 
       setForecast({ currentWeather, todaysHighlights, upcomingDaysForecast });
       setLoading(false);
+      const historySearches =
+        JSON.parse(localStorage.getItem("historySearches")) || [];
+
+      if (!historySearches.includes(data.location.name)) {
+        historySearches.push(data.location.name);
+        historySearches.splice(
+          -MAX_HISTORY_ITEMS - 1,
+          historySearches.length - MAX_HISTORY_ITEMS
+        );
+
+        localStorage.setItem(
+          "historySearches",
+          JSON.stringify(historySearches)
+        );
+      }
     });
   }, [query, setError, setForecast, setLoading]);
 };
