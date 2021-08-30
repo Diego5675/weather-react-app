@@ -6,13 +6,21 @@ import Error from "components/Error";
 import { useForecastContext } from "context/ForecastContext";
 
 const WeatherDetails = () => {
-  const { loading, error, forecast } = useForecastContext();
+  const { setUnitTemperature, loading, error, forecast } = useForecastContext();
+
+  const changeToFahrenheit = () => {
+    setUnitTemperature("F");
+  };
+
+  const changeToCelsius = () => {
+    setUnitTemperature("C");
+  };
 
   return (
     <div>
       <div>
-        <button>°C</button>
-        <button>°F</button>
+        <button onClick={changeToCelsius}>°C</button>
+        <button onClick={changeToFahrenheit}>°F</button>
       </div>
       {!forecast && (
         <>

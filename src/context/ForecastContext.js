@@ -3,13 +3,23 @@ import React, { useState } from "react";
 const ForecastContext = React.createContext();
 
 export const ForecastProvider = ({ children }) => {
+  const [unitTemperature, setUnitTemperature] = useState("C");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [forecast, setForecast] = useState(null);
 
   return (
     <ForecastContext.Provider
-      value={{ loading, setLoading, error, setError, forecast, setForecast }}
+      value={{
+        unitTemperature,
+        setUnitTemperature,
+        loading,
+        setLoading,
+        error,
+        setError,
+        forecast,
+        setForecast,
+      }}
     >
       {children}
     </ForecastContext.Provider>

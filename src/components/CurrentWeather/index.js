@@ -1,6 +1,7 @@
 import React from "react";
 
 const CurrentWeather = ({
+  unit,
   temperature,
   condition,
   iconUrl,
@@ -12,7 +13,7 @@ const CurrentWeather = ({
       <img src={iconUrl} alt={condition} />
       <p>
         <span>{temperature}</span>
-        <span>°C</span>
+        <span>°{unit}</span>
       </p>
       <p>{condition}</p>
       <p>

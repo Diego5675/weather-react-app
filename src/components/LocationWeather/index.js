@@ -4,7 +4,7 @@ import { useForecastContext } from "context/ForecastContext";
 import { useForecast } from "hooks/useForecast";
 
 const LocationWeather = ({ onShowing }) => {
-  const { forecast } = useForecastContext();
+  const { unitTemperature, forecast } = useForecastContext();
   const [query, setQuery] = useState(null);
   useForecast(query);
 
@@ -30,7 +30,12 @@ const LocationWeather = ({ onShowing }) => {
       </div>
       {forecast && (
         <CurrentWeather
-          temperature={forecast?.currentWeather?.temperature}
+          unit={unitTemperature}
+          temperature={
+            unitTemperature === "C"
+              ? forecast?.currentWeather?.temperature_c
+              : forecast?.currentWeather?.temperature_f
+          }
           condition={forecast?.currentWeather?.condition}
           iconUrl={forecast?.currentWeather?.icon_url}
           date={forecast?.currentWeather?.date}
