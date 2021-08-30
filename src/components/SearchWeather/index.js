@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import SearchForm from "components/SearchForm";
 import { useForecast } from "hooks/useForecast";
 
-const SearchWeather = () => {
+const SearchWeather = ({ onShowing }) => {
   const [query, setQuery] = useState(null);
   useForecast(query);
 
@@ -10,10 +10,14 @@ const SearchWeather = () => {
     setQuery(location);
   }, []);
 
+  const handleShowing = () => {
+    onShowing();
+  };
+
   return (
     <>
       <div>
-        <button>X</button>
+        <button onClick={handleShowing}>X</button>
       </div>
       <SearchForm onSubmit={handleSubmit} />
     </>

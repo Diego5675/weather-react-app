@@ -3,12 +3,12 @@ import CurrentWeather from "components/CurrentWeather";
 import { useForecastContext } from "context/ForecastContext";
 import { useForecast } from "hooks/useForecast";
 
-const LocationWeather = () => {
+const LocationWeather = ({ onShowing }) => {
   const { forecast } = useForecastContext();
   const [query, setQuery] = useState(null);
   useForecast(query);
 
-  const handleClick = useCallback(() => {
+  const handleGeolocation = useCallback(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
         setQuery(`${position.coords.latitude},${position.coords.longitude}`);
@@ -18,11 +18,15 @@ const LocationWeather = () => {
     }
   }, []);
 
+  const handleShowing = () => {
+    onShowing();
+  };
+
   return (
     <>
       <div>
-        <button>Search for places</button>
-        <button onClick={handleClick}>Geolocation</button>
+        <button onClick={handleShowing}>Search for places</button>
+        <button onClick={handleGeolocation}>Geolocation</button>
       </div>
       {forecast && (
         <CurrentWeather

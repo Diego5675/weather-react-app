@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchWeather from "components/SearchWeather";
 import LocationWeather from "components/LocationWeather";
 import WeatherDetails from "components/WeatherDetails";
@@ -7,13 +7,21 @@ import { useForecast } from "hooks/useForecast";
 import "./App.css";
 
 function App() {
+  const [isSearching, setIsSearching] = useState(false);
   const { latitude, longitude } = useGeolocation();
   useForecast(latitude && `${latitude},${longitude}`);
 
+  const handleShowing = () => {
+    setIsSearching(!isSearching);
+  };
+
   return (
     <div className="App">
-      <SearchWeather />
-      <LocationWeather />
+      {isSearching ? (
+        <SearchWeather onShowing={handleShowing} />
+      ) : (
+        <LocationWeather onShowing={handleShowing} />
+      )}
       <WeatherDetails />
     </div>
   );
