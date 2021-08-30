@@ -1,26 +1,26 @@
-export const getTodaysHighlights = (data) => [
+export const getTodaysHighlights = (current) => [
   {
     name: "Wind status",
-    value: data.wind_mph,
+    value: current.wind_mph,
     unit: "mph",
     more_info: {
-      direction: data.wind_dir,
-      degree: data.wind_degree,
+      direction: current.wind_dir,
+      degree: current.wind_degree,
     },
   },
   {
     name: "Humidity",
-    value: data.humidity,
+    value: current.humidity,
     unit: "%",
   },
   {
     name: "Visibility",
-    value: new Intl.NumberFormat("es").format(data.vis_miles),
+    value: new Intl.NumberFormat("es").format(current.vis_miles),
     unit: "miles",
   },
   {
     name: "Air Pressure",
-    value: Math.round(data.pressure_mb),
+    value: Math.round(current.pressure_mb),
     unit: "mb",
   },
 ];
