@@ -1,7 +1,7 @@
 export const getTodaysHighlights = (current) => [
   {
     name: "Wind status",
-    value: current.wind_mph,
+    value: new Intl.NumberFormat("es").format(current.wind_mph),
     unit: "mph",
     more_info: {
       direction: current.wind_dir,

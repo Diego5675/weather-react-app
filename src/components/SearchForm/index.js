@@ -9,6 +9,8 @@ const SearchForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    onSubmit(value);
+    setValue("");
   };
 
   return (
@@ -24,4 +26,4 @@ const SearchForm = ({ onSubmit }) => {
   );
 };
 
-export default SearchForm;
+export default React.memo(SearchForm);

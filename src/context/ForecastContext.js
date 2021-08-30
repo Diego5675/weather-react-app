@@ -4,7 +4,7 @@ const ForecastContext = React.createContext();
 
 export const ForecastProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [forecast, setForecast] = useState(null);
 
   return (

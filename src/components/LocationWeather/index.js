@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import CurrentWeather from "components/CurrentWeather";
 import { useForecastContext } from "context/ForecastContext";
+import { useForecast } from "hooks/useForecast";
 
 const LocationWeather = () => {
   const { forecast } = useForecastContext();
+  const [query, setQuery] = useState(null);
+  useForecast(query);
+
+  const handleClick = useCallback(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setQuery(`${position.coords.latitude},${position.coords.longitude}`);
+      });
+    } else {
+      alert("Geolocation disable");
+    }
+  }, []);
 
   return (
     <>
       <div>
         <button>Search for places</button>
-        <button>Geolocation</button>
+        <button onClick={handleClick}>Geolocation</button>
       </div>
       {forecast && (
         <CurrentWeather
