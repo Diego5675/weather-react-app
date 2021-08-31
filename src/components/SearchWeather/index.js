@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import SearchForm from "components/SearchForm";
 import HistorySearches from "components/HistorySearches";
 import { useForecast } from "hooks/useForecast";
+import styles from "./SearchWeather.module.css";
 
 const SearchWeather = ({ onShowing }) => {
   const [query, setQuery] = useState(null);
@@ -20,13 +21,15 @@ const SearchWeather = ({ onShowing }) => {
   };
 
   return (
-    <>
-      <div>
-        <button onClick={handleShowing}>X</button>
+    <div className={styles.searchWeather}>
+      <div className={styles.buttonContainer}>
+        <button className={styles.button} onClick={handleShowing}>
+          <span className="material-icons">close</span>
+        </button>
       </div>
       <SearchForm onSubmit={handleSubmit} />
       <HistorySearches onSubmit={handleSubmit} />
-    </>
+    </div>
   );
 };
 

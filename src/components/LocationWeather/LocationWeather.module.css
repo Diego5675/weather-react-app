@@ -13,6 +13,7 @@
   border: none;
   background-color: #6e707a;
   color: #e7e7eb;
+  cursor: pointer;
 }
 
 .searchPlacesButton {

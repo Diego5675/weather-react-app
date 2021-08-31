@@ -1,0 +1,21 @@
+.searchWeather {
+  composes: card from "App.module.css";
+  height: 100vh;
+  padding: 17px 12px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 2px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+  color: #e7e7eb;
+  background: none;
+  cursor: pointer;
+}
