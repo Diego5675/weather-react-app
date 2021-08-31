@@ -4,7 +4,6 @@ import LocationWeather from "components/LocationWeather";
 import WeatherDetails from "components/WeatherDetails";
 import { useGeolocation } from "hooks/useGeolocation";
 import { useForecast } from "hooks/useForecast";
-import "./App.css";
 
 function App() {
   const [isSearching, setIsSearching] = useState(false);

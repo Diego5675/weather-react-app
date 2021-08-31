@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import CurrentWeather from "components/CurrentWeather";
 import { useForecastContext } from "context/ForecastContext";
 import { useForecast } from "hooks/useForecast";
+import styles from "./LocationWeather.module.css";
 
 const LocationWeather = ({ onShowing }) => {
   const { unitTemperature, forecast } = useForecastContext();
@@ -23,10 +24,14 @@ const LocationWeather = ({ onShowing }) => {
   };
 
   return (
-    <>
-      <div>
-        <button onClick={handleShowing}>Search for places</button>
-        <button onClick={handleGeolocation}>Geolocation</button>
+    <div className={styles.locationWeather}>
+      <div className={styles.locationButtons}>
+        <button className={styles.searchPlacesButton} onClick={handleShowing}>
+          Search for places
+        </button>
+        <button className={styles.locationButton} onClick={handleGeolocation}>
+          <span class="material-icons">my_location</span>
+        </button>
       </div>
       {forecast && (
         <CurrentWeather
@@ -42,7 +47,7 @@ const LocationWeather = ({ onShowing }) => {
           location={forecast?.currentWeather?.location}
         />
       )}
-    </>
+    </div>
   );
 };
 
