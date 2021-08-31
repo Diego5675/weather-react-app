@@ -13,14 +13,16 @@ export const useForecast = (query) => {
   useEffect(() => {
     if (!query) return;
     setLoading(true);
+    setError(null);
+    setForecast(null);
 
-    getForecast(query).then((response) => {
-      if (response === "Something went wrong") {
-        setError(response);
+    getForecast(query).then(({ data, error }) => {
+      if (error) {
+        setError(error.message);
         setLoading(false);
         return;
       }
-      const { data } = response;
+      // const { data } = response;
       const currentWeather = getCurrentWeather(data.location, data.current);
       const todaysHighlights = getTodaysHighlights(data.current);
       const upcomingDaysForecast = getUpcomingDaysForecast(
