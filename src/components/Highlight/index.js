@@ -1,4 +1,5 @@
 import React from "react";
+import ProgressBar from "components/ProgressBar";
 import styles from "./Highlight.module.css";
 
 const Highlight = ({ name, value, unit, moreInfo }) => {
@@ -20,7 +21,7 @@ const Highlight = ({ name, value, unit, moreInfo }) => {
           <span className={styles.windText}>{moreInfo.direction}</span>
         </p>
       )}
-      {name === "Humidity" && <p>Progress_bar</p>}
+      {name === "Humidity" && <ProgressBar percentage={value} />}
     </div>
   );
 };

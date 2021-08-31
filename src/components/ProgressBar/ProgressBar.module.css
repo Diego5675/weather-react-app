@@ -1,0 +1,40 @@
+.progressBar {
+  width: 70%;
+  margin-top: 30px;
+}
+
+.texts {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #a09fb1;
+}
+
+.textPercentages {
+  composes: texts;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 80px;
+}
+
+.progress100 {
+  composes: progress;
+  margin: 2px 0 4px;
+  width: 100%;
+  background-color: #e7e7eb;
+}
+
+.progressPercentage {
+  composes: progress;
+  background-color: #ffec65;
+}
+
+.unit {
+  composes: texts;
+  display: flex;
+  justify-content: flex-end;
+}
