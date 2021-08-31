@@ -1,0 +1,29 @@
+.upComingDay {
+  composes: card from "App.module.css";
+  width: 100%;
+  padding: 18px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  line-height: 19px;
+  margin-bottom: 9px;
+}
+
+.icon {
+  width: 56px;
+  margin-bottom: 32px;
+}
+
+.maxmin {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  line-height: 19px;
+}
+
+.min {
+  color: #a09fb1;
+}

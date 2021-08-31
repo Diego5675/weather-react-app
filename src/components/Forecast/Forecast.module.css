@@ -1,0 +1,7 @@
+.forecast {
+  margin: 52px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 32px 26px;
+  place-content: center;
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import UpcomingDay from "components/UpcomingDay";
 import { useForecastContext } from "context/ForecastContext";
+import styles from "./Forecast.module.css";
 
 const Forecast = ({ forecastDays }) => {
   const { unitTemperature } = useForecastContext();
 
   return (
-    <div>
+    <div className={styles.forecast}>
       {forecastDays.map((day) => (
         <UpcomingDay
           key={day.date}
