@@ -9,3 +9,16 @@
   font-size: 24px;
   line-height: 28px;
 }
+
+@media screen and (min-width: 1024px) {
+  .todaysHighlights {
+    margin: 0;
+    padding: 0;
+  }
+
+  .highlightsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+}

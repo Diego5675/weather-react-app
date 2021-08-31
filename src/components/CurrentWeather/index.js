@@ -17,14 +17,16 @@ const CurrentWeather = ({
         <span className={styles.unit}>°{unit}</span>
       </p>
       <p className={styles.condition}>{condition}</p>
-      <p className={styles.today}>
-        <span>Today</span>
-        <span className={styles.date}>{date}</span>
-      </p>
-      <p className={styles.locationContainer}>
-        <span className="material-icons">place</span>
-        <span className={styles.location}>{location}</span>
-      </p>
+      <div>
+        <p className={styles.today}>
+          <span>Today</span>
+          <span className={styles.date}>{date}</span>
+        </p>
+        <p className={styles.locationContainer}>
+          <span className="material-icons">place</span>
+          <span className={styles.location}>{location}</span>
+        </p>
+      </div>
     </div>
   );
 };

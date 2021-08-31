@@ -5,3 +5,11 @@
   gap: 32px 26px;
   place-content: center;
 }
+
+@media screen and (min-width: 1024px) {
+  .forecast {
+    margin: 66px 0 72px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 26px;
+  }
+}

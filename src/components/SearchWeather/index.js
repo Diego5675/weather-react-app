@@ -22,13 +22,15 @@ const SearchWeather = ({ onShowing }) => {
 
   return (
     <div className={styles.searchWeather}>
-      <div className={styles.buttonContainer}>
-        <button className={styles.button} onClick={handleShowing}>
-          <span className="material-icons">close</span>
-        </button>
+      <div className={styles.searchWrapper}>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button} onClick={handleShowing}>
+            <span className="material-icons">close</span>
+          </button>
+        </div>
+        <SearchForm onSubmit={handleSubmit} />
+        <HistorySearches onSubmit={handleSubmit} />
       </div>
-      <SearchForm onSubmit={handleSubmit} />
-      <HistorySearches onSubmit={handleSubmit} />
     </div>
   );
 };

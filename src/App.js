@@ -4,6 +4,7 @@ import LocationWeather from "components/LocationWeather";
 import WeatherDetails from "components/WeatherDetails";
 import { useGeolocation } from "hooks/useGeolocation";
 import { useForecast } from "hooks/useForecast";
+import styles from "./App.module.css";
 
 function App() {
   const [isSearching, setIsSearching] = useState(false);
@@ -15,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       {isSearching ? (
         <SearchWeather onShowing={handleShowing} />
       ) : (

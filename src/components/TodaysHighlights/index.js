@@ -6,15 +6,17 @@ const TodaysHighlights = ({ highlights }) => {
   return (
     <div className={styles.todaysHighlights}>
       <h3 className={styles.title}>Today's Highlights</h3>
-      {highlights.map((highlight) => (
-        <Highlight
-          key={highlight.name}
-          name={highlight.name}
-          value={highlight.value}
-          unit={highlight.unit}
-          moreInfo={highlight.more_info}
-        />
-      ))}
+      <div className={styles.highlightsContainer}>
+        {highlights.map((highlight) => (
+          <Highlight
+            key={highlight.name}
+            name={highlight.name}
+            value={highlight.value}
+            unit={highlight.unit}
+            moreInfo={highlight.more_info}
+          />
+        ))}
+      </div>
     </div>
   );
 };

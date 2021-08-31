@@ -1,3 +1,11 @@
 .card {
   background-color: #1e213a;
 }
+
+@media screen and (min-width: 1024px) {
+  .app {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+  }
+}

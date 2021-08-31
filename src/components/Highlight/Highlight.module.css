@@ -47,3 +47,13 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+@media screen and (min-width: 1024px) {
+  .highlight {
+    margin: 0;
+  }
+
+  .windDirection {
+    margin-top: 40px;
+  }
+}

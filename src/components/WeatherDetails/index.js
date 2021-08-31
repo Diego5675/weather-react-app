@@ -19,7 +19,7 @@ const WeatherDetails = () => {
   };
 
   return (
-    <div>
+    <div className={styles.weatherDetails}>
       <div className={styles.unitTempButtons}>
         <button
           className={

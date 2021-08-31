@@ -29,3 +29,16 @@
   background-color: #585676;
   color: #e7e7eb;
 }
+
+@media screen and (min-width: 1024px) {
+  .weatherDetails {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 42px;
+  }
+
+  .unitTempButtons {
+    margin: 0;
+    padding: 0;
+  }
+}
