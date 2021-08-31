@@ -34,7 +34,7 @@
 
 @media screen and (min-width: 1024px) {
   .locationWeather {
-    height: 100vh;
+    height: 100%;
     padding: 42px 0;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -44,5 +44,9 @@
   .locationButtons {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .wrapper {
+    height: 75vh;
   }
 }

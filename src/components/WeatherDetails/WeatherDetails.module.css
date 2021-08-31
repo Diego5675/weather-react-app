@@ -34,7 +34,7 @@
   .weatherDetails {
     width: 70%;
     margin: 0 auto;
-    padding-top: 42px;
+    padding: 42px 0;
   }
 
   .unitTempButtons {

@@ -33,20 +33,22 @@ const LocationWeather = ({ onShowing }) => {
           <span className="material-icons">my_location</span>
         </button>
       </div>
-      {forecast && (
-        <CurrentWeather
-          unit={unitTemperature}
-          temperature={
-            unitTemperature === "C"
-              ? forecast?.currentWeather?.temperature_c
-              : forecast?.currentWeather?.temperature_f
-          }
-          condition={forecast?.currentWeather?.condition}
-          iconUrl={forecast?.currentWeather?.icon_url}
-          date={forecast?.currentWeather?.date}
-          location={forecast?.currentWeather?.location}
-        />
-      )}
+      <div className={styles.wrapper}>
+        {forecast && (
+          <CurrentWeather
+            unit={unitTemperature}
+            temperature={
+              unitTemperature === "C"
+                ? forecast?.currentWeather?.temperature_c
+                : forecast?.currentWeather?.temperature_f
+            }
+            condition={forecast?.currentWeather?.condition}
+            iconUrl={forecast?.currentWeather?.icon_url}
+            date={forecast?.currentWeather?.date}
+            location={forecast?.currentWeather?.location}
+          />
+        )}
+      </div>
     </div>
   );
 };
