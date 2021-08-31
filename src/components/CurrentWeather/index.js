@@ -22,7 +22,7 @@ const CurrentWeather = ({
         <span className={styles.date}>{date}</span>
       </p>
       <p className={styles.locationContainer}>
-        <span class="material-icons">place</span>
+        <span className="material-icons">place</span>
         <span className={styles.location}>{location}</span>
       </p>
     </div>

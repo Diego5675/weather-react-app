@@ -1,5 +1,5 @@
 .forecast {
-  margin: 52px 0;
+  margin: 40px 0 50px;
   display: grid;
   grid-template-columns: repeat(2, 120px);
   gap: 32px 26px;

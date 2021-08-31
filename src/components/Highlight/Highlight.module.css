@@ -1,0 +1,49 @@
+.highlight {
+  composes: card from "App.module.css";
+  margin-bottom: 32px;
+  padding-bottom: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  margin-top: 22px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.valueContainer {
+  margin-top: 6px;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.unit {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.windDirection {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.windText {
+  margin-left: 10px;
+}
+
+.windIcon {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}

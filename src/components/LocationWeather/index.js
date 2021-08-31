@@ -30,7 +30,7 @@ const LocationWeather = ({ onShowing }) => {
           Search for places
         </button>
         <button className={styles.locationButton} onClick={handleGeolocation}>
-          <span class="material-icons">my_location</span>
+          <span className="material-icons">my_location</span>
         </button>
       </div>
       {forecast && (

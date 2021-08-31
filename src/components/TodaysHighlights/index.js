@@ -1,10 +1,11 @@
 import React from "react";
 import Highlight from "components/Highlight";
+import styles from "./TodaysHighlights.module.css";
 
 const TodaysHighlights = ({ highlights }) => {
   return (
-    <div>
-      <h3>Today's Highlights</h3>
+    <div className={styles.todaysHighlights}>
+      <h3 className={styles.title}>Today's Highlights</h3>
       {highlights.map((highlight) => (
         <Highlight
           key={highlight.name}
