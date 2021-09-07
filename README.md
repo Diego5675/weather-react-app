@@ -1,4 +1,4 @@
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Weather App</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://dpasch-weather-app.vercel.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/Diego5675/weather-react-app">
       Solution
     </a>
     <span> | </span>
@@ -20,53 +20,50 @@
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-
 ## Table of Contents
 
 - [Overview](#overview)
   - [Built With](#built-with)
 - [Features](#features)
 - [How to use](#how-to-use)
-- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
-
-<!-- OVERVIEW -->
+- [Contact](#contact)
 
 ## Overview
 
 ![screenshot](https://user-images.githubusercontent.com/37351280/132419105-3305f757-2c3b-4a34-8496-d3ada3ca29ec.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+- [Demo](https://dpasch-weather-app.vercel.app/)
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+I was able to build a project with my React.js knowledge so far with a Weather application using the [waetherapi](https://www.weatherapi.com/) API to complete the challenge.
+
+What I learned was how to use browsers [Web Navigator API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) to use users current location and how to save data to [localStorage Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to save user city searches.
 
 ### Built With
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
-## How To Use
+- Can see the weather of my current location.
+- Can search weather for city.
+- Can see weather of today and the next 5 days.
+- Can see the date and location of the weather.
+- Can see according to image for each type of weather.
+- Can see the min and max degree each day.
+- Can request current location weather.
+- Can convert temperature in Celcius to Fahrenheit and vice versa.
 
-<!-- Example: -->
+## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/Diego5675/weather-react-app.git
 
 # Install dependencies
 $ npm install
@@ -77,14 +74,10 @@ $ npm start
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [Miguel Ángel Durán](https://twitter.com/midudev)
+- [Carlos Azaustre](https://twitter.com/carlosazaustre)
+- [Web Dev Simplified](https://twitter.com/DevSimplified)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@Diego5675](https://github.com/Diego5675)
