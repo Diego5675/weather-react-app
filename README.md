@@ -63,7 +63,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Diego5675/weather-react-app.git
+$ git clone https://github.com/diegopascual/weather-react-app
 
 # Install dependencies
 $ npm install
@@ -80,4 +80,4 @@ $ npm start
 
 ## Contact
 
-- GitHub [@Diego5675](https://github.com/Diego5675)
+- GitHub [@diegopascual](https://github.com/diegopascual)
