@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/Diego5675/weather-react-app">
+    <a href="https://github.com/diegopascual/weather-react-app">
       Solution
     </a>
     <span> | </span>
